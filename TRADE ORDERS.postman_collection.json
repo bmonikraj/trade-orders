@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "46f127b8-a9ac-4108-8964-e6af5dd68a55",
+		"name": "TRADE ORDERS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Historical Prices for Instrument",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/price/historical-data?symbol=NIFTY BANK&from_date=2017-01-02&to_date=2017-01-11",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"price",
+						"historical-data"
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "NIFTY BANK"
+						},
+						{
+							"key": "from_date",
+							"value": "2017-01-02"
+						},
+						{
+							"key": "to_date",
+							"value": "2017-01-11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6ImJtb25pa3JhajEiLCJwYXNzd29yZF9oYXNoIjoiODFkYzliZGI1MmQwNGRjMjAwMzZkYmQ4MzEzZWQwNTUiLCJmdWxsbmFtZSI6Ik1vbmlrMSJ9.fJddgKCmt_LnKKGU7CmRZ2jON3Oi-CiAaW8bzm4-JBM",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/api/user/profile",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Portfolio",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6ImJtb25pa3JhajEiLCJwYXNzd29yZF9oYXNoIjoiODFkYzliZGI1MmQwNGRjMjAwMzZkYmQ4MzEzZWQwNTUiLCJmdWxsbmFtZSI6Ik1vbmlrMSJ9.fJddgKCmt_LnKKGU7CmRZ2jON3Oi-CiAaW8bzm4-JBM",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/api/portfolio/holdings",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"portfolio",
+						"holdings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fullname\": \"Monik1\",\n    \"password\": \"1234\",\n    \"username\": \"bmonikraj1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/user/register",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"1234\",\n    \"username\": \"bmonikraj1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/user/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6ImJtb25pa3JhajEiLCJwYXNzd29yZF9oYXNoIjoiODFkYzliZGI1MmQwNGRjMjAwMzZkYmQ4MzEzZWQwNTUiLCJmdWxsbmFtZSI6Ik1vbmlrMSJ9.fJddgKCmt_LnKKGU7CmRZ2jON3Oi-CiAaW8bzm4-JBM",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"symbol\": \"INFOSYS\",\n    \"quantity\": \"10\",\n    \"price\": \"189.00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/order/place-order",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"order",
+						"place-order"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8000",
+			"type": "default"
+		}
+	]
+}

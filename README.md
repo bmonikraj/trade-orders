@@ -47,3 +47,12 @@ In `aap.env` file, the key value pairs are to manage the deployment properties.
 The standard web security is followed with username and password. If successful login, then token (as jwt) is shared in response, which needs to be passed as 'X-Token' header with subsequent requests for validation. 
 
 ## UI
+
+- `cd ui`
+- `npm install --save`
+- `npm start`
+- In browser, go to `http://localhost:3000`
+
+## Postman Collection
+
+- Postman collection is present in the repository, to interact with APIs directly.
